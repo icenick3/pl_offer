@@ -1,0 +1,31 @@
+#counter1 {
+  display: flex;
+  background: #2477E1;
+  width: 40vw;
+  border-radius: 5px;
+  padding: 5px 3px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  left: calc(50% - 20vw);
+  color: black;
+
+  #text {
+    margin: 0;
+    padding: 4px 8px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+
+  #number {
+    width: fit-content;
+    margin: 0 2px 0 auto;
+    color: black;
+    background: white;
+    padding: 4px 8px;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+}
