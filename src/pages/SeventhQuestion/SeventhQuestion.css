@@ -1,3 +1,9 @@
-
+.h22Text {
+  padding: 10px;
+  font-size: 15px;
+}
+.h22Text span {
+  color: #FFD600;
+}
 
 /*# sourceMappingURL=SeventhQuestion.css.map */

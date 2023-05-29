@@ -56,15 +56,15 @@ const CalculatePage = ({setCounter}) => {
                     </div>
                     <div className="results">
                         <p>
-                            <img src="https://i.pinimg.com/originals/59/2d/a7/592da7bf36a85b09166b6db31202dc06.png" alt=""/>
+                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
                             Analyse des réponses
                         </p>
                         {progress > 53 && <p>
-                            <img src="https://i.pinimg.com/originals/59/2d/a7/592da7bf36a85b09166b6db31202dc06.png" alt=""/>
+                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
                             Identification des traumatismes psychologiques de l'enfance
                         </p>}
                         {progress > 75 && <p>
-                            <img src="https://i.pinimg.com/originals/59/2d/a7/592da7bf36a85b09166b6db31202dc06.png" alt=""/>
+                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
                             Vérification de l'exactitude du résultat
                         </p>}
                     </div>

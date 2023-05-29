@@ -18,17 +18,12 @@ const FifthQuestion = ({setCounter , randomNumber}) => {
                 transition={{ duration: 0.5 }}
             >
                 <div id="first">
-                    <h1>Selon vous, qu'est-ce qui est superflu ici ?</h1>
-                    <div className="imagesContainer">
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/11/76/94/1176946902909738f106f2a73159ec48.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/e3/16/a4/e316a487db9fc79be5d56b154b7022fb.png" alt="" onClick={onclick}/>
-                        </div>
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/17/b8/9f/17b89f685f3be3bad6814b0ebd433b35.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/54/f1/65/54f165dcb6389afcd48202b22a38503d.png" alt="" onClick={onclick}/>
-                        </div>
-                    </div>
+                    <h1>Quelle est la première chose que vous avez vue ?</h1>
+                    <img src="https://i.pinimg.com/originals/95/c3/ca/95c3ca1712c7634d953edf146d621ef6.png" alt=""/>
+                    <p onClick={()=> onclick()}>Loup</p>
+                    <p onClick={()=> onclick()}>Papillon</p>
+                    <p onClick={()=> onclick()}>Oiseau</p>
+                    <p onClick={()=> onclick()}>Le chien</p>
                 </div>
             </motion.div>
         </AnimatePresence>

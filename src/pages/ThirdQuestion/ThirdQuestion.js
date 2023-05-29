@@ -17,17 +17,11 @@ const ThirdQuestion = ({setCounter, randomNumber}) => {
                 transition={{ duration: 0.5 }}
             >
                 <div id="first">
-                    <h1>Quel type de nourriture préférez-vous ?</h1>
-                    <div className="imagesContainer">
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/a2/8d/2c/a28d2c1940d7ce9c33ad95df80add2e5.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/bd/e2/03/bde2033b2f9222cff64f00b071e02e58.png" alt="" onClick={onclick}/>
-                        </div>
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/69/5e/44/695e44b1f60c349607e47b48438eae75.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/5d/96/40/5d9640fd05017e936415f7c402dc9087.png" alt="" onClick={onclick}/>
-                        </div>
-                    </div>
+                    <h1>Fermez les yeux pendant quelques secondes</h1>
+                    <img src="https://i.pinimg.com/originals/4e/60/69/4e6069c953c26a3549fce4ce4a0b6a8e.png" alt=""/>
+                    <p onClick={()=> onclick()}>A.</p>
+                    <p onClick={()=> onclick()}>B.</p>
+                    <p onClick={()=> onclick()}>C.</p>
                 </div>
             </motion.div>
         </AnimatePresence>

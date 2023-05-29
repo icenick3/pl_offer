@@ -17,7 +17,7 @@ import UserCounter from "./components/UserCounter/UserCounter";
 
 
 function App() {
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(1)
 
 
     const [randomNumber, setRandomNumber] = useState(687);
@@ -36,7 +36,6 @@ function App() {
     }, []);
     return (
         <div className="App">
-            <Header/>
             {counter === 0 && <TitlePage setCounter={setCounter}/>}
             {counter === 1 && <FirstQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
             {counter === 2 && <SecondQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
@@ -49,7 +48,6 @@ function App() {
             {counter === 9 && <NinthQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
             {counter === 10 && <TenthQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
             {counter === 11 && <CalculatePage setCounter={setCounter}/>}
-            {counter !== 11 && counter !==0 && <UserCounter randomNumber={randomNumber}/>}
             {counter > 0 && counter <=10 && <p id="counter">{counter} / 10</p>}
         </div>
     );

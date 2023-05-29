@@ -17,17 +17,16 @@ const TenthQuestion = ({setCounter, randomNumber}) => {
                 exit={{ x: 1000,  }}
                 transition={{ duration: 0.5 }}
             >
-                <div id="first">
-                    <h1>Où aimez-vous vous reposer ?</h1>
+                <div id="second">
+                    <h1>Choisissez la figure qui vous plaît le plus</h1>
                     <div className="imagesContainer">
                         <div className="images">
-                            <img src="https://i.pinimg.com/originals/ba/23/4e/ba234ebc5c3864687df323474a2258a5.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/e6/f1/6e/e6f16ec31a88b71a3c81f769d3e31226.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/46/f2/6b/46f26bfed375af6352155da5d7dc66e3.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/fc/83/b5/fc83b55a2e5a1387961c275f51966027.png" alt="" onClick={onclick}/>
                         </div>
                         <div className="images">
-                            <img src="https://i.pinimg.com/originals/0f/c5/04/0fc50445608e893514333102033d9785.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/cc/e6/fc/cce6fc0ccac7d254c200fca4bba7ca74.png" alt="" onClick={onclick}/>
-
+                            <img src="https://i.pinimg.com/originals/71/89/1a/71891aee9843a56bb2b3265f5b45622d.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/1e/0b/eb/1e0beb849a0cc8542d016c7fb0599d1b.png" alt="" onClick={onclick}/>
                         </div>
                     </div>
                 </div>

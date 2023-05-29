@@ -12,10 +12,11 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: white;
 }
 
 body {
-  background: white;
+  background: #222222;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -26,8 +27,13 @@ body {
 }
 .images img {
   display: block;
-  margin: 20px;
-  width: 120px;
+  margin: 20px 10px;
+  width: 160px;
+}
+@media screen and (max-device-height: 500px) {
+  .images img {
+    width: 100px;
+  }
 }
 
 .imagesContainer {
@@ -36,11 +42,10 @@ body {
 
 #counter {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   width: 100px;
   text-align: center;
   left: calc(50% - 50px);
-  color: black;
 }
 
 #offer {

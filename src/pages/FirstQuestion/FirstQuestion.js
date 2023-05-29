@@ -19,17 +19,11 @@ const FirstQuestion = ({setCounter, randomNumber}) => {
                 transition={{ duration: 0.5 }}
             >
                 <div id="first">
-                    <h1>Choisissez la couleur que vous préférez</h1>
-                    <div className="imagesContainer">
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/57/d0/cc/57d0cc00e513faf125a8d412042f4705.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/74/9d/2a/749d2a750777c46de689340255398503.png" alt="" onClick={onclick}/>
-                        </div>
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/f9/0f/0a/f90f0a035f99c10f0767a9bf39d8c5c4.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/cf/ee/33/cfee33cb92684855e3d030743d1849bf.png" alt="" onClick={onclick}/>
-                        </div>
-                    </div>
+                    <h1>Fermez les yeux pendant quelques secondes</h1>
+                    <img src="https://i.pinimg.com/originals/70/63/1d/70631ddb8bbccc1964261244ea527a5f.png" alt=""/>
+                    <p onClick={()=> onclick()}>A.</p>
+                    <p onClick={()=> onclick()}>B.</p>
+                    <p onClick={()=> onclick()}>C.</p>
                 </div>
             </motion.div>
         </AnimatePresence>

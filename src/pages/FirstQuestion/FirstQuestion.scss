@@ -2,10 +2,18 @@
   padding: 30px;
   h1{
 text-align: start;
-    color: black;
-    font-size: 26px;
+    font-size: 22px;
   }
   img{
-
+    width: 100%;
+    margin: 20px auto;
+  }
+  p{
+    display: block;
+    border: 2px #FF7171 solid;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-size: 20px;
+    margin: 0 auto 15px auto;
   }
 }

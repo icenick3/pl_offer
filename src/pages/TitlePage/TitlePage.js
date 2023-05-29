@@ -11,7 +11,7 @@ const TitlePage = ({setCounter}) => {
 
 
     return (<div id="title_page">
-        <h1>Découvrez les traumatismes psychologiques que vous avez subis dans votre enfance</h1>
+        <h1>Découvrez ce que vos préférences révèlent de vous</h1>
         <br/>
         <p id="title_text"> Répondez à 10 questions pour découvrir quel type de traumatisme psychologique vous empêche de vivre pleinement votre vie.</p>
         <br/>
@@ -24,44 +24,13 @@ const TitlePage = ({setCounter}) => {
                 </filter>
             </defs>
         </svg>
-
-        {isAndroid && <button id="gooey-button" onClick={() => setCounter(1)}>
-            Przejdź do testu
-            <span className="bubbles">
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-	</span>
-        </button>}
-        {isPC && <button id="gooey-button" onClick={() => setCounter(1)}>
-            Przejdź do testu
-            <span className="bubbles">
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-		<span className="bubble"></span>
-	</span>
-        </button>}
-        {isIOS && <a className="animated-button" onClick={() => setCounter(1)}>
+        <a className="animated-button1" onClick={() => setCounter(1)}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             PASSER LE TEST
-        </a>}
+        </a>
     </div>);
 };
 

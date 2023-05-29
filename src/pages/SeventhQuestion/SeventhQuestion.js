@@ -17,17 +17,17 @@ const SeventhQuestion = ({setCounter, randomNumber}) => {
                 exit={{ x: 1000,  }}
                 transition={{ duration: 0.5 }}
             >
-                <div id="first">
-                    <h1>Quels animaux domestiques préférez-vous ?</h1>
+                <div id="second">
+                    <h1>Fermez les yeux pendant quelques secondes</h1>
+                    <h2 className="h22Text">Ouvrez les yeux et choisissez <span>l'endroit qui vous attire le plus</span></h2>
                     <div className="imagesContainer">
                         <div className="images">
-                                <img src="https://i.pinimg.com/originals/7a/a9/8b/7aa98bfb32c833a1803fc9559142d826.png" alt="" onClick={onclick}/>
-                                <img src="https://i.pinimg.com/originals/83/05/b4/8305b4714f6bad828dfce8410b8a92d0.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/a4/cc/07/a4cc07a43cca53f051acbce2c0331e92.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/b8/4f/f4/b84ff43de9ea510bd995ea428bc34ceb.png" alt="" onClick={onclick}/>
                         </div>
                         <div className="images">
-                                <img src="https://i.pinimg.com/originals/ec/6b/e8/ec6be8420d7bcb60921f537aff6e05c2.png" alt="" onClick={onclick}/>
-                                <img src="https://i.pinimg.com/originals/cf/67/9a/cf679a9ea320ce97f10274917acd5661.png" alt="" onClick={onclick}/>
-
+                            <img src="https://i.pinimg.com/originals/52/7d/53/527d531369f30ca9ea54681b7539b199.png" alt="" onClick={onclick}/>
+                            <img src="https://i.pinimg.com/originals/72/4f/d5/724fd5b10766e55009b039879a338055.png" alt="" onClick={onclick}/>
                         </div>
                     </div>
                 </div>
