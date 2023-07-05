@@ -61,13 +61,6 @@ const CalculatePage = ({setCounter}) => {
 
     const {t} = useTranslation()
 
-
-    useEffect(() => {
-        let interval2 = setInterval(function () {
-
-        }, 500);
-    }, [])
-
     return (
         <AnimatePresence mode="wait">
             <motion.div
@@ -82,17 +75,17 @@ const CalculatePage = ({setCounter}) => {
                     </div>
                     <div className="results">
                         <p>
-                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                            <img src="https://i.pinimg.com/originals/c0/40/d2/c040d230f8c06d0272674651048952a7.png"
                                  alt=""/>
                             {t("check1")}
                         </p>
                         {progress > 53 && <p>
-                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                            <img src="https://i.pinimg.com/originals/c0/40/d2/c040d230f8c06d0272674651048952a7.png"
                                  alt=""/>
                             {t("check2")}
                         </p>}
                         {progress > 75 && <p>
-                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                            <img src="https://i.pinimg.com/originals/c0/40/d2/c040d230f8c06d0272674651048952a7.png"
                                  alt=""/>
                             {t("check3")}
                         </p>}

@@ -1,12 +1,26 @@
-.question{
+.question {
   width: 100%;
-  h1{
+  padding: 0 30px;
+  input{
+    color: black;
+    padding: 5px 10px;
+    font-size: 24px;
+    width: 50%;
+    margin-top: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+  }
+  h1 {
     font-size: 25px;
     padding: 20px 10px;
+    text-transform: uppercase;
   }
-  button{
-    background-color: #5000ff;
+
+  button {
+    background-color: rgba(197, 40, 40, 1);
     display: block;
+    text-transform: uppercase;
     border: none;
     outline: none;
     margin: 40px auto;
@@ -16,99 +30,42 @@
     border-radius: 20px;
     width: 75%;
   }
-  .imageBox{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy.webp");
-    background-position: center;
+
+  .button2 {
+    margin: 20px auto 40px 0;
+    width: 50%;
+    border-radius: 10px;
   }
-  .imageBox2{
+
+  img {
     width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy2.webp");
-    background-position: center;
-    background-position-y: -200px;
-    background-repeat: no-repeat;
+    margin-bottom: 20px;
   }
-  .imageBox3{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy3.webp");
-    background-position: center;
-    background-repeat: no-repeat;
+  .firstImage{
+    width: 90%;
+    display: block;
+    margin: 0 auto 20px auto;
   }
-  .imageBox4{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy4.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .imageBox5{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy5.webp");
-    background-position: center;
-    background-position-y: -100px;
-    background-repeat: no-repeat;
-  }
-  .imageBox6{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy6.webp");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  .imageBox7{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy7.webp");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  .imageBox8{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy8.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: -40px;
-  }
-  .imageBox9{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy9.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: -40px;
-  }
-  .imageBox10{
-    width: 100%;
-    height: 200px;
-    background: url("https://loveriq.online/sweep/za1/giphy10.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: -40px;
-  }
-  .answer{
+
+  .answer {
     display: flex;
     margin: 10px auto;
     width: 90%;
     border: 3px solid #3c3c47;
     border-radius: 27px;
     align-items: center;
-    padding: 10px 30px 10px 15px;
-    .checkBox{
-      div{
+    padding: 5px 30px 5px 15px;
+
+    .checkBox {
+      div {
         border: 3px solid #3c3c47;
         border-radius: 100px;
         width: 20px;
         height: 20px;
         margin: 0 20px 0 0;
         position: relative;
-        img{
+
+        img {
           width: 20px;
           height: 20px;
           position: absolute;
@@ -117,30 +74,32 @@
           transform: scale(0);
           transition: transform ease 0.3s;
         }
-        .imgCheck{
+
+        .imgCheck {
           transform: scale(1);
         }
 
       }
 
     }
-    .ansText{
+
+    .ansText {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 400;
       color: white;
       opacity: 0.5;
     }
   }
 }
 
-#divCheck{
-  border: 3px solid #5000ff;
+#divCheck {
+  border: 3px solid rgba(197, 40, 40, 1);
 }
 
-#opaci{
+#opaci {
   opacity: 1;
 }
 
-#gray{
+#gray {
   background-color: lightgray;
 }

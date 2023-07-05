@@ -5,23 +5,31 @@ import UserCounter from "../../components/UserCounter/UserCounter";
 import {useTranslation} from "react-i18next";
 const ThirdQuestion = ({setCounter, randomNumber}) => {
     const [curref, setCurRef] = useState(null)
+    const [hasId, setHasId] = useState(false)
 
     useEffect(() => {
         if (curref) {
             refs.map(ref => {
-                if (ref.current === curref.current) {
-                    ref.current.id = "divCheck"
-                    ref.current.children[0].children[0].children[0].classList.add('imgCheck')
-                    ref.current.children[1].id = 'opaci'
-
+                if (ref.current.id !== "divCheck") {
+                    if (ref.current === curref.current) {
+                        ref.current.id = "divCheck"
+                        ref.current.children[0].children[0].children[0].classList.add('imgCheck')
+                        ref.current.children[1].id = 'opaci'
+                    }
                 } else {
-                    ref.current.id = ""
-                    ref.current.children[0].children[0].children[0].classList.remove('imgCheck')
-                    ref.current.children[1].id = ''
+
+                    if (ref.current === curref.current) {
+                        ref.current.id = ""
+                        ref.current.children[0].children[0].children[0].classList.remove('imgCheck')
+                        ref.current.children[1].id = ''
+                    }
                 }
-
-
             })
+
+            if (refs[0].current.id === "" && refs[1].current.id === "" && refs[2].current.id === "" && refs[3].current.id === ""){
+                setHasId(false)
+            } else setHasId(true)
+
         }
     }, [curref])
 
@@ -30,12 +38,9 @@ const ThirdQuestion = ({setCounter, randomNumber}) => {
         useRef(),
         useRef(),
         useRef(),
-        useRef(),
-        useRef(),
+        useRef()
     ]
-    const onclick = () => {
-        setCounter(2)
-    }
+
     const {t} = useTranslation()
     return (
         <AnimatePresence mode="wait">
@@ -46,9 +51,9 @@ const ThirdQuestion = ({setCounter, randomNumber}) => {
                 transition={{duration: 0.5}}
             >
                 <div className="question">
-                    <div className="imageBox3"></div>
-                    <h1>{t("legs")}</h1>
-                    <div ref={refs[0]} className="answer" onClick={() => setCurRef(refs[0])}>
+                    <h1>{t("years")}</h1>
+                    <img className="firstImage" src="https://i.pinimg.com/originals/f4/bb/b0/f4bbb0e3776401972b3166f93a5a3578.png" alt=""/>
+                    <div ref={refs[0]} className="answer" onClick={() => setCurRef({...refs[0]})}>
                         <div className="checkBox">
                             <div>
                                 <img
@@ -57,55 +62,49 @@ const ThirdQuestion = ({setCounter, randomNumber}) => {
                             </div>
                         </div>
                         <div className="ansText">
-                            {t("ans7")}
+                            {t("ans1")}
                         </div>
                     </div>
-                    <div ref={refs[1]} className="answer" onClick={() => setCurRef(refs[1])}>
+                    <div ref={refs[1]} className="answer" onClick={() => setCurRef({...refs[1]})}>
                         <div className="checkBox">
                             <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
+                                <img
+                                    src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                    alt=""/>
                             </div>
                         </div>
                         <div className="ansText">
-                            {t("ans8")}
+                            {t("ans2")}
                         </div>
                     </div>
-                    <div ref={refs[2]} className="answer" onClick={() => setCurRef(refs[2])}>
+                    <div ref={refs[2]} className="answer" onClick={() => setCurRef({...refs[2]})}>
                         <div className="checkBox">
                             <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
+                                <img
+                                    src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                    alt=""/>
                             </div>
                         </div>
                         <div className="ansText">
-                            {t("ans9")}
+                            {t("ans3")}
                         </div>
                     </div>
-                    <div ref={refs[3]} className="answer" onClick={() => setCurRef(refs[3])}>
+                    <div ref={refs[3]} className="answer" onClick={() => setCurRef({...refs[3]})}>
                         <div className="checkBox">
                             <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
+                                <img
+                                    src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                    alt=""/>
                             </div>
                         </div>
                         <div className="ansText">
-                            {t("ans10")}
+                            {t("ans4")}
                         </div>
                     </div>
-                    <div ref={refs[4]} className="answer" onClick={() => setCurRef(refs[4])}>
-                        <div className="checkBox">
-                            <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
-                            </div>
-                        </div>
-                        <div className="ansText">
-                            {t("ans11")}
-                        </div>
-                    </div>
-                    <button id={curref ? "" : "gray"} onClick={()=> {
-                        if (curref){setCounter(4)}
+                    <button id={hasId ? "" : "gray"} onClick={() => {
+                        if (hasId) {
+                            setCounter(4)
+                        }
                     }}>{t("next")}</button>
                 </div>
             </motion.div>

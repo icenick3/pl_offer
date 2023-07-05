@@ -5,36 +5,9 @@ import UserCounter from "../../components/UserCounter/UserCounter";
 import {useTranslation} from "react-i18next";
 
 const TenthQuestion = ({setCounter, randomNumber}) => {
-    const [curref, setCurRef] = useState(null)
 
-    useEffect(() => {
-        if (curref) {
-            refs.map(ref => {
-                if (ref.current === curref.current) {
-                    ref.current.id = "divCheck"
-                    ref.current.children[0].children[0].children[0].classList.add('imgCheck')
-                    ref.current.children[1].id = 'opaci'
+    const [inputText, setText] = useState(null)
 
-                } else {
-                    ref.current.id = ""
-                    ref.current.children[0].children[0].children[0].classList.remove('imgCheck')
-                    ref.current.children[1].id = ''
-                }
-
-
-            })
-        }
-    }, [curref])
-
-
-    const refs = [
-        useRef(),
-        useRef(),
-        useRef(),
-    ]
-    const onclick = () => {
-        setCounter(2)
-    }
     const {t} = useTranslation()
     return (
         <AnimatePresence mode="wait">
@@ -45,43 +18,15 @@ const TenthQuestion = ({setCounter, randomNumber}) => {
                 transition={{duration: 0.5}}
             >
                 <div className="question">
-                    <div className="imageBox10"></div>
-                    <h1>{t("active")}</h1>
-                    <div ref={refs[0]} className="answer" onClick={() => setCurRef(refs[0])}>
-                        <div className="checkBox">
-                            <div>
-                                <img
-                                    src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                    alt=""/>
-                            </div>
-                        </div>
-                        <div className="ansText">
-                            {t("ans36")}
-                        </div>
-                    </div>
-                    <div ref={refs[1]} className="answer" onClick={() => setCurRef(refs[1])}>
-                        <div className="checkBox">
-                            <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
-                            </div>
-                        </div>
-                        <div className="ansText">
-                            {t("ans37")}
-                        </div>
-                    </div>
-                    <div ref={refs[2]} className="answer" onClick={() => setCurRef(refs[2])}>
-                        <div className="checkBox">
-                            <div>
-                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
-                                     alt=""/>
-                            </div>
-                        </div>
-                        <div className="ansText">
-                            {t("ans38")}
-                        </div>
-                    </div>
-                    <button onClick={()=> setCounter(11)}>{t("next")}</button>
+                    <h1>{t("legs")}</h1>
+                    <img src="https://i.pinimg.com/originals/2c/c1/f7/2cc1f705ad4a2523772155a80bc7a880.png" alt=""/>
+                    <p>{t("input")}</p>
+                    <input type="text"  onChange={(e)=>setText(e.target.value)}/>
+                    <button className="button2" id={inputText ? "" : "gray"} onClick={() => {
+                        if (inputText) {
+                            setCounter(11)
+                        }
+                    }}>{t("next")}</button>
                 </div>
             </motion.div>
         </AnimatePresence>
