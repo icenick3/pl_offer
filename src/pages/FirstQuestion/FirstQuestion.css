@@ -1,21 +1,144 @@
-#first {
-  padding: 30px;
-}
-#first h1 {
-  text-align: start;
-  font-size: 22px;
-}
-#first img {
+.question {
   width: 100%;
-  margin: 20px auto;
 }
-#first p {
+.question h1 {
+  font-size: 25px;
+  padding: 20px 10px;
+}
+.question button {
+  background-color: #5000ff;
   display: block;
-  border: 2px #FF7171 solid;
-  border-radius: 30px;
-  padding: 5px 20px;
+  border: none;
+  outline: none;
+  margin: 40px auto;
+  padding: 10px 20px;
   font-size: 20px;
-  margin: 0 auto 15px auto;
+  font-weight: 800;
+  border-radius: 20px;
+  width: 75%;
+}
+.question .imageBox {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy.webp");
+  background-position: center;
+}
+.question .imageBox2 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy2.webp");
+  background-position: center;
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+}
+.question .imageBox3 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.question .imageBox4 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy4.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.question .imageBox5 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy5.webp");
+  background-position: center;
+  background-position-y: -100px;
+  background-repeat: no-repeat;
+}
+.question .imageBox6 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy6.webp");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.question .imageBox7 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy7.webp");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.question .imageBox8 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy8.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -40px;
+}
+.question .imageBox9 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy9.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -40px;
+}
+.question .imageBox10 {
+  width: 100%;
+  height: 200px;
+  background: url("https://loveriq.online/sweep/za1/giphy10.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -40px;
+}
+.question .answer {
+  display: flex;
+  margin: 10px auto;
+  width: 90%;
+  border: 3px solid #3c3c47;
+  border-radius: 27px;
+  align-items: center;
+  padding: 10px 30px 10px 15px;
+}
+.question .answer .checkBox div {
+  border: 3px solid #3c3c47;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  margin: 0 20px 0 0;
+  position: relative;
+}
+.question .answer .checkBox div img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  transform: scale(0);
+  transition: transform ease 0.3s;
+}
+.question .answer .checkBox div .imgCheck {
+  transform: scale(1);
+}
+.question .answer .ansText {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  opacity: 0.5;
+}
+
+#divCheck {
+  border: 3px solid #5000ff;
+}
+
+#opaci {
+  opacity: 1;
+}
+
+#gray {
+  background-color: lightgray;
 }
 
 /*# sourceMappingURL=FirstQuestion.css.map */

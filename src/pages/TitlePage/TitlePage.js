@@ -1,37 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './TitlePage.css'
-import axios from "axios";
+import {useTranslation} from "react-i18next";
+
 
 const TitlePage = ({setCounter}) => {
 
-
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-    const isPC = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const {t} = useTranslation()
 
 
-    return (<div id="title_page">
-        <h1>Découvrez ce que vos préférences révèlent de vous</h1>
-        <br/>
-        <p id="title_text"> Répondez à 10 questions pour découvrir quel type de traumatisme psychologique vous empêche de vivre pleinement votre vie.</p>
-        <br/>
-        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <defs>
-                <filter id="gooey">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-                    <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-                </filter>
-            </defs>
-        </svg>
-        <a className="animated-button1" onClick={() => setCounter(1)}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            PASSER LE TEST
-        </a>
-    </div>);
+    return (
+        <div id="gorilla_page">
+            <section></section>
+            <h1 className="gorilla_page-title">{t("title")}</h1>
+            <p className="gorilla_page-text">{t("title_text")}</p>
+            <button className="gorilla_page-btn" onClick={()=> setCounter(1)}>{t("start")}</button>
+            <hr/>
+            <h3>{t("text1")}</h3>
+            <p className="gorilla_page-text2">{t("text2")}</p>
+            <br/>
+            <p className="gorilla_page-text2">{t("text3")}</p>
+            <h4>{t("text4")}</h4>
+            <h4>{t("text5")}</h4>
+            <p className="gorilla_page-text2">{t("text6")}</p>
+            <br/>
+            <p className="gorilla_page-text2">{t("text7")}</p>
+            <button className="gorilla_page-btn" onClick={()=> setCounter(1)}>{t("start")}</button>
+        </div>);
 };
 
 export default TitlePage;

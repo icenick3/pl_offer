@@ -1,15 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './CalculatePage.css'
 import {AnimatePresence, motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 const CalculatePage = ({setCounter}) => {
 
     const [progress, setProgress] = useState(0);
     const [active, setActive] = useState(false);
-
-    const newPath = document.querySelector('#buttonOffer').href
-
-
 
     useEffect(() => {
         let interval;
@@ -18,6 +15,8 @@ const CalculatePage = ({setCounter}) => {
             interval = setInterval(() => {
                 setProgress((prevProgress) => {
                     const newProgress = prevProgress + 1;
+                    let a = document.querySelector('#buttonOffer')
+                    console.log(a.href)
                     if (newProgress >= 100) {
                         clearInterval(interval);
                     }
@@ -30,17 +29,44 @@ const CalculatePage = ({setCounter}) => {
             startTimer();
         }
 
-        if (progress === 100){
+        if (progress === 100) {
             clearInterval(interval);
-            setTimeout(()=>{
-                window.location.href = newPath
-            },1500)
+            setTimeout(() => {
+                if ((document.cookie.indexOf('_fbp') !== -1) && (document.cookie.indexOf('_fbc') !== -1)) {
+                    function getCookieValue(cookieName) {
+                        const cookies = document.cookie.split(';');
+                        for (let i = 0; i < cookies.length; i++) {
+                            const cookie = cookies[i].trim();
+                            if (cookie.startsWith(cookieName + '=')) {
+                                return cookie.substring(cookieName.length + 1);
+                            }
+                        }
+                        return null;
+                    }
+                    const fbpValue = getCookieValue('_fbp');
+                    const fbcValue = getCookieValue('_fbc');
+                    let a = document.querySelector('#buttonOffer')
+                    a.href = a.href + `&sub_id_7=${fbcValue}&sub_id_8=${fbpValue}$sub1={subid}`
+                    console.log(a.href)
+                    window.location.href = document.querySelector('#buttonOffer').href
+                }
+
+            }, 1500)
         }
 
         return () => {
             clearInterval(interval);
         };
     }, [progress, active]);
+
+    const {t} = useTranslation()
+
+
+    useEffect(() => {
+        let interval2 = setInterval(function () {
+
+        }, 500);
+    }, [])
 
     return (
         <AnimatePresence mode="wait">
@@ -56,16 +82,19 @@ const CalculatePage = ({setCounter}) => {
                     </div>
                     <div className="results">
                         <p>
-                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
-                            Analyse des réponses
+                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                                 alt=""/>
+                            {t("check1")}
                         </p>
                         {progress > 53 && <p>
-                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
-                            Identification des traumatismes psychologiques de l'enfance
+                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                                 alt=""/>
+                            {t("check2")}
                         </p>}
                         {progress > 75 && <p>
-                            <img src="https://i.pinimg.com/originals/e7/48/33/e748337036df38c352ec9e2db78f1864.png" alt=""/>
-                            Vérification de l'exactitude du résultat
+                            <img src="https://i.pinimg.com/originals/9a/66/e8/9a66e835f06d3fceb7ed23ae5d4425b8.png"
+                                 alt=""/>
+                            {t("check3")}
                         </p>}
                     </div>
                 </div>

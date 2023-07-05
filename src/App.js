@@ -17,7 +17,7 @@ import UserCounter from "./components/UserCounter/UserCounter";
 
 
 function App() {
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(0)
 
 
     const [randomNumber, setRandomNumber] = useState(687);
@@ -48,7 +48,7 @@ function App() {
             {counter === 9 && <NinthQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
             {counter === 10 && <TenthQuestion setCounter={setCounter} randomNumber={randomNumber}/>}
             {counter === 11 && <CalculatePage setCounter={setCounter}/>}
-            {counter > 0 && counter <=10 && <p id="counter">{counter} / 10</p>}
+            {/*{counter > 0 && counter <=10 && <p id="counter">{counter} / 10</p>}*/}
         </div>
     );
 }

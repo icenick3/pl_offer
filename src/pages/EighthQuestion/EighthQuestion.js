@@ -1,33 +1,100 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './EighthQuestion.css'
 import {AnimatePresence, motion} from "framer-motion";
 import UserCounter from "../../components/UserCounter/UserCounter";
+import {useTranslation} from "react-i18next";
 const EighthQuestion = ({setCounter, randomNumber}) => {
+    const [curref, setCurRef] = useState(null)
 
+    useEffect(() => {
+        if (curref) {
+            refs.map(ref => {
+                if (ref.current === curref.current) {
+                    ref.current.id = "divCheck"
+                    ref.current.children[0].children[0].children[0].classList.add('imgCheck')
+                    ref.current.children[1].id = 'opaci'
+
+                } else {
+                    ref.current.id = ""
+                    ref.current.children[0].children[0].children[0].classList.remove('imgCheck')
+                    ref.current.children[1].id = ''
+                }
+
+
+            })
+        }
+    }, [curref])
+
+
+    const refs = [
+        useRef(),
+        useRef(),
+        useRef(),
+        useRef()
+    ]
     const onclick = () => {
-        setCounter(9)
+        setCounter(2)
     }
-
+    const {t} = useTranslation()
     return (
         <AnimatePresence mode="wait">
             <motion.div
-                initial={{ y: -1000,  }}
-                animate={{ y: 0,  }}
-                exit={{ y: 100,  }}
-                transition={{ duration: 0.5 }}
+                initial={{y: -1000}}
+                animate={{y: 0,}}
+                exit={{y: 1000,}}
+                transition={{duration: 0.5}}
             >
-                <div id="second">
-                    <h1>Quel type de nourriture préférez-vous ?</h1>
-                    <div className="imagesContainer">
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/a6/ca/22/a6ca229ac279ef2af4ecc2fffa2de2fa.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/d9/c3/1a/d9c31af1df73de6c2165b717ec7130b0.png" alt="" onClick={onclick}/>
+                <div className="question">
+                    <div className="imageBox8"></div>
+                    <h1>{t("people")}</h1>
+                    <div ref={refs[0]} className="answer" onClick={() => setCurRef(refs[0])}>
+                        <div className="checkBox">
+                            <div>
+                                <img
+                                    src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                    alt=""/>
+                            </div>
                         </div>
-                        <div className="images">
-                            <img src="https://i.pinimg.com/originals/a3/a5/45/a3a5457bca082fd7ffbc1aabda6c5756.png" alt="" onClick={onclick}/>
-                            <img src="https://i.pinimg.com/originals/3d/a3/0d/3da30d6d57a85dd38d743802289fdef2.png" alt="" onClick={onclick}/>
+                        <div className="ansText">
+                            {t("ans29")}
                         </div>
                     </div>
+                    <div ref={refs[1]} className="answer" onClick={() => setCurRef(refs[1])}>
+                        <div className="checkBox">
+                            <div>
+                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div className="ansText">
+                            {t("ans30")}
+                        </div>
+                    </div>
+                    <div ref={refs[2]} className="answer" onClick={() => setCurRef(refs[2])}>
+                        <div className="checkBox">
+                            <div>
+                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div className="ansText">
+                            {t("ans31")}
+                        </div>
+                    </div>
+                    <div ref={refs[3]} className="answer" onClick={() => setCurRef(refs[3])}>
+                        <div className="checkBox">
+                            <div>
+                                <img src="https://i.pinimg.com/originals/d4/e8/d0/d4e8d08beffc3aefb0f7bb820bbc435f.png"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div className="ansText">
+                            {t("ans32")}
+                        </div>
+                    </div>
+                    <button id={curref ? "" : "gray"} onClick={()=> {
+                        if (curref){setCounter(9)}
+                    }}>{t("next")}</button>
                 </div>
             </motion.div>
         </AnimatePresence>
