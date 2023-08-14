@@ -32,25 +32,7 @@ const CalculatePage = ({setCounter}) => {
         if (progress === 100) {
             clearInterval(interval);
             setTimeout(() => {
-                if ((document.cookie.indexOf('_fbp') !== -1) && (document.cookie.indexOf('_fbc') !== -1)) {
-                    function getCookieValue(cookieName) {
-                        const cookies = document.cookie.split(';');
-                        for (let i = 0; i < cookies.length; i++) {
-                            const cookie = cookies[i].trim();
-                            if (cookie.startsWith(cookieName + '=')) {
-                                return cookie.substring(cookieName.length + 1);
-                            }
-                        }
-                        return null;
-                    }
-                    const fbpValue = getCookieValue('_fbp');
-                    const fbcValue = getCookieValue('_fbc');
-                    let a = document.querySelector('#buttonOffer')
-                    a.href = a.href + `&sub_id_7=${fbcValue}&sub_id_8=${fbpValue}$sub1={subid}`
-                    console.log(a.href)
                     window.location.href = document.querySelector('#buttonOffer').href
-                }
-
             }, 1500)
         }
 
